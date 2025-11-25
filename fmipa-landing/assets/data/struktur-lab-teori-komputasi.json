@@ -1,0 +1,12 @@
+{
+  "kepala_lab": {"nama": "Dr. R. Kusuma", "periode": "2024–2027"},
+  "sekretaris": {"nama": "Dr. S. Dewi"},
+  "koordinator": [
+    {"bidang": "Komputasi Material", "nama": "Dr. R. Kusuma"},
+    {"bidang": "Metode Numerik", "nama": "Dr. S. Dewi"}
+  ],
+  "staf_riset": [
+    {"nama": "Angga Anugrah", "posisi": "Asisten Riset"},
+    {"nama": "Bima Pratama", "posisi": "Asisten Riset"}
+  ]
+}

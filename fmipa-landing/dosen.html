@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Daftar Dosen Program Studi Fisika FMIPA."
+    />
+    <title>FMIPA — Dosen Prodi Fisika</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assets/styles.css" />
+    <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml" />
+    <style>
+      .sub-hero {
+        background: linear-gradient(135deg, #0f3d91, #1a54c3);
+        color: #fff;
+        padding: 3rem 0;
+      }
+      .breadcrumbs {
+        color: #c7d2fe;
+      }
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 1rem;
+      }
+      .card-person {
+        background: #fff;
+        border: 1px solid #e6eeff;
+        border-radius: 16px;
+        padding: 1rem;
+        text-align: center;
+      }
+      .avatar {
+        width: 110px;
+        height: 110px;
+        border-radius: 50%;
+        overflow: hidden;
+        margin: 0 auto 10px;
+        background: #e7efff;
+      }
+      .avatar img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+      }
+      .pill {
+        display: inline-block;
+        background: #f3f6ff;
+        border: 1px solid #e6eeff;
+        color: #0f3d91;
+        border-radius: 999px;
+        padding: 0.15rem 0.6rem;
+        font-size: 0.8rem;
+        font-weight: 700;
+      }
+      .tags {
+        display: flex;
+        gap: 0.4rem;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin-top: 0.35rem;
+      }
+      .section-title {
+        margin-bottom: 0.5rem;
+      }
+      .group-title {
+        margin: 1.5rem 0 0.75rem;
+      }
+      @media (max-width: 1024px) {
+        .grid {
+          grid-template-columns: repeat(3, 1fr);
+        }
+      }
+      @media (max-width: 768px) {
+        .grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+      }
+      @media (max-width: 520px) {
+        .grid {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Lewati ke konten</a>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a
+          class="brand"
+          href="prodi-fisika.html"
+          aria-label="Beranda Prodi Fisika"
+        >
+          <img src="assets/img/logo.svg" alt="Logo FMIPA" class="logo" />
+          <div class="brand-text">
+            <span class="brand-title">FMIPA</span>
+            <span class="brand-sub">Program Studi Fisika</span>
+          </div>
+        </a>
+        <nav class="nav" aria-label="Navigasi utama">
+          <button
+            class="nav-toggle"
+            aria-expanded="false"
+            aria-controls="nav-menu"
+            aria-label="Buka menu"
+          >
+            <span class="bar"></span><span class="bar"></span
+            ><span class="bar"></span>
+          </button>
+          <ul id="nav-menu" class="nav-menu">
+            <li><a href="#kontak" class="btn btn-sm btn-primary">Kontak</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <section class="sub-hero">
+      <div class="container">
+        <div class="breadcrumbs">
+          <a href="index.html">Beranda</a> /
+          <a href="lab-teori-komputasi.html">Lab Teori & Komputasi</a> /
+          <strong>Dosen</strong>
+        </div>
+
+        <h1 style="margin: 0">Daftar Dosen</h1>
+      </div>
+
+      <style>
+        .breadcrumbs a {
+          color: #ffffff !important;
+          text-decoration: none;
+        }
+        .breadcrumbs a:hover {
+          text-decoration: underline;
+          opacity: 0.8;
+        }
+        .breadcrumbs {
+          color: #ffffff;
+          font-size: 0.9rem;
+          margin-bottom: 10px;
+        }
+        .breadcrumbs .muted-text {
+          color: #d1d1d1;
+        }
+        .breadcrumbs strong {
+          color: #ffffff;
+        }
+      </style>
+    </section>
+    <main id="main">
+      <section id="teori-komputasi" class="section">
+        <div class="container">
+          <h2 class="section-title">Dosen — Teori & Komputasi</h2>
+          <p class="section-sub">
+            Kelompok keahlian fisika teori, komputasi ilmiah, dan data sains.
+          </p>
+          <div class="grid">
+            <article class="card-person">
+              <div class="avatar">
+                <a href="profil-wira.html">
+                  <img
+                    src="assets/img/prof-dr-rer-nat-wira-bahari-nurdin.jpg"
+                    alt="Prof. Wira"
+                  />
+                </a>
+              </div>
+
+              <strong>
+                <a href="profil-wira.html" class="person-link">
+                  Prof. Dr. rer-nat Wira Bahari Nurdin
+                  <style>
+                    /* Paksa semua link di dalam kartu dosen jadi hitam */
+                    .card-person strong a {
+                      color: #1f2937 !important;
+                      text-decoration: none !important;
+                    }
+
+                    /* Biru hanya saat hover */
+                    .card-person strong a:hover {
+                      color: #0f3d91 !important;
+                      text-decoration: underline !important;
+                    }
+                  </style>
+                </a>
+              </strong>
+
+              <div class="muted">Guru Besar / IV.d</div>
+              <div class="tags">
+                <span class="pill">wirabn@fmipa.unhas.ac.id</span>
+              </div>
+            </article>
+            <article class="card-person">
+              <div class="avatar">
+                <a href="profil-tasrief.html">
+                  <img
+                    src="assets/img/prof-dr-tasrief-surungan-m-sc.jpg"
+                    alt="Prof Tasrief"
+                  />
+                </a>
+              </div>
+              <strong>
+                <a href="profil-tasrief.html" class="person-link"
+                  >Prof. Dr. Tasrief Surungan, M.Sc</a
+                >
+              </strong>
+              <div class="muted">Guru Besar / IV.c</div>
+              <div class="tags">
+                <span class="pill">tasrief@unhas.ac.id</span>
+              </div>
+            </article>
+
+            <article class="card-person">
+              <div class="avatar">
+                <a href="profil-bangsawan.html"></a>
+                <img
+                  src="assets/img/drs-bansawang-bj-m-sc.jpg"
+                  alt="Prof Bangsawang"
+                />
+              </div>
+              <strong>
+                <a href="profil-bangsawan.html" class="person-link"
+                  >Drs. Bansawang BJ, M.Sc.
+                </a>
+              </strong>
+              <div class="muted">Lektor Kepala / IV.a</div>
+              <div class="tags">
+                <span class="pill">bansawang@fmipa.unhas.ac.id </span>
+              </div>
+            </article>
+
+            <article class="card-person">
+              <div class="avatar">
+                <a href="profil-azwar.html">
+                  <img src="assets/img/azwar-sutiono.jpg" alt="Dr. Azwar" onerror="this.src='assets/img/lab-teori-dan-komputasi.jpg'" />
+                </a>
+              </div>
+              <strong><a class="person-link" href="profil-azwar.html">Dr. Azwar Sutiono, M.Si</a></strong>
+              <div class="muted">Dosen</div>
+              <div class="tags">
+                <span class="pill">azwar.sutiono@unhas.ac.id</span>
+              </div>
+            </article>
+
+            <article class="card-person">
+              <div class="avatar">
+                <a href="profil-bayu.html">
+                  <img src="assets/img/bayu-dirgantara-sst-phd.jpg" alt="Bayu Dirgantara, SST., Ph.D" onerror="this.src='assets/img/lab-teori-dan-komputasi.jpg'" />
+                </a>
+              </div>
+              <strong><a class="person-link" href="profil-bayu.html">Bayu Dirgantara, SST., Ph.D</a></strong>
+              <div class="muted">Dosen</div>
+              <div class="tags">
+                <span class="pill">bayu.dirgantara@unhas.ac.id</span>
+              </div>
+            </article>
+
+            <article class="card-person">
+              <div class="avatar">
+                <a href="profil-eko-juarlin.html">
+                  <img src="assets/img/eko-juarlin.jpg" alt="Eko Juarlin, S.Si., M.Si." onerror="this.src='assets/img/lab-teori-dan-komputasi.jpg'" />
+                </a>
+              </div>
+              <strong><a class="person-link" href="profil-eko-juarlin.html">Eko Juarlin, S.Si., M.Si.</a></strong>
+              <div class="muted">Dosen</div>
+              <div class="tags">
+                <span class="pill">eko.juarlin@unhas.ac.id</span>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="kontak" class="cta section">
+        <div class="container cta-inner">
+          <div>
+            <h2 class="section-title">Kontak Sekretariat</h2>
+            <p class="section-sub">
+              Untuk informasi lebih lanjut mengenai dosen dan kolaborasi.
+            </p>
+          </div>
+          <a href="mailto:phys@sci.unhas.ac.id" class="btn btn-primary btn-lg"
+            >Email Sekretariat</a
+          >
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-grid">
+        <div>
+          <div class="brand brand-footer">
+            <img src="assets/img/logo.svg" alt="Logo FMIPA" class="logo" />
+            <div class="brand-text">
+              <span class="brand-title">FMIPA</span>
+              <span class="brand-sub">Program Studi Fisika</span>
+            </div>
+          </div>
+          <p class="muted">Hak Cipta © 2025 FMIPA.</p>
+        </div>
+        <nav aria-label="Tautan footer">
+          <h4>Tautan</h4>
+          <ul class="footer-links">
+            <li><a href="prodi-fisika.html">Kembali ke Prodi Fisika</a></li>
+            <li><a href="#teori-komputasi">Teori & Komputasi</a></li>
+            <li><a href="#material-energi">Material & Energi</a></li>
+            <li>
+              <a href="#elektronika-instrumentasi"
+                >Elektronika & Instrumentasi</a
+              >
+            </li>
+            <li><a href="#optik-medis">Optik & Medis</a></li>
+          </ul>
+        </nav>
+        <div>
+          <h4>Newsletter</h4>
+          <form class="newsletter" onsubmit="return handleNewsletter(event)">
+            <input
+              type="email"
+              placeholder="Email Anda"
+              aria-label="Email untuk berlangganan"
+              required
+            />
+            <button class="btn btn-sm btn-ghost" type="submit">
+              Langganan
+            </button>
+          </form>
+        </div>
+      </div>
+    </footer>
+
+    <script src="assets/script.js"></script>
+  </body>
+</html>

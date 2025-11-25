@@ -1,0 +1,698 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Program Studi Fisika FMIPA: profil, kurikulum, laboratorium, staf, dan informasi pendaftaran."
+    />
+    <title>FMIPA — Program Studi Fisika</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assets/styles.css" />
+    <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml" />
+    <style>
+      .sub-hero {
+        background: linear-gradient(135deg, #0f3d91, #1a54c3);
+        color: #fff;
+        padding: 3rem 0;
+        margin-top: 0;
+      }
+      .sub-hero h1 {
+        font-family: "Playfair Display", serif;
+        margin: 0;
+      }
+      .breadcrumbs {
+        margin-top: 0.5rem;
+        color: #c7d2fe;
+        font-size: 0.95rem;
+      }
+      .breadcrumbs a {
+        color: #e5edff;
+        text-decoration: none;
+      }
+      .breadcrumbs a:hover {
+        text-decoration: underline;
+      }
+      .key-stats {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 1rem;
+        margin-top: 1rem;
+      }
+      .key-stats .k {
+        background: #ffffff10;
+        border: 1px solid #ffffff29;
+        border-radius: 14px;
+        padding: 1rem;
+      }
+      .k .n {
+        font-size: 1.4rem;
+        font-weight: 800;
+      }
+      .pill {
+        display: inline-block;
+        background: #fff;
+        border: 1px solid #e6eeff;
+        color: #0f3d91;
+        border-radius: 999px;
+        padding: 0.25rem 0.6rem;
+        font-weight: 700;
+        font-size: 0.9rem;
+      }
+      .labs {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1rem;
+      }
+      .lab {
+        background: #fff;
+        border: 1px solid #e6eeff;
+        border-radius: 16px;
+        overflow: hidden;
+        box-shadow: var(--shadow-sm);
+      }
+      .lab img {
+        aspect-ratio: 16/9;
+        object-fit: cover;
+      }
+      .lab .b {
+        padding: 1rem;
+      }
+      .syllabus {
+        display: grid;
+        grid-template-columns: 1.2fr 1fr;
+        gap: 1rem;
+      }
+      .list {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+      }
+      .list li {
+        padding: 0.55rem 0.75rem;
+        border: 1px solid #e6eeff;
+        border-radius: 12px;
+        margin-bottom: 0.5rem;
+        background: #fff;
+      }
+      .staff {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 1rem;
+      }
+      .person {
+        background: #fff;
+        border: 1px solid #e6eeff;
+        border-radius: 16px;
+        padding: 1rem;
+        text-align: center;
+      }
+      .avatar {
+        width: 84px;
+        height: 84px;
+        border-radius: 50%;
+        margin: 0 auto 0.5rem;
+        background: #e7efff;
+        display: grid;
+        place-items: center;
+        color: #0f3d91;
+        font-weight: 800;
+      }
+      .faq {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+      }
+      details {
+        background: #fff;
+        border: 1px solid #e6eeff;
+        border-radius: 12px;
+        padding: 1rem;
+      }
+      summary {
+        cursor: pointer;
+        font-weight: 700;
+      }
+      @media (max-width: 900px) {
+        .key-stats {
+          grid-template-columns: 1fr 1fr;
+        }
+        .labs {
+          grid-template-columns: 1fr 1fr;
+        }
+        .syllabus {
+          grid-template-columns: 1fr;
+        }
+        .staff {
+          grid-template-columns: 1fr 1fr;
+        }
+        .faq {
+          grid-template-columns: 1fr;
+        }
+      }
+      @media (max-width: 640px) {
+        .labs {
+          grid-template-columns: 1fr;
+        }
+        .staff {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Lewati ke konten</a>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="brand" href="index.html" aria-label="Beranda FMIPA">
+          <img src="assets/img/logo.svg" alt="Logo FMIPA" class="logo" />
+          <div class="brand-text">
+            <span class="brand-title">FMIPA</span>
+            <span class="brand-sub">Program Studi Fisika</span>
+          </div>
+        </a>
+        <nav class="nav" aria-label="Navigasi utama">
+          <button
+            class="nav-toggle"
+            aria-expanded="false"
+            aria-controls="nav-menu"
+            aria-label="Buka menu"
+          >
+            <span class="bar"></span><span class="bar"></span
+            ><span class="bar"></span>
+          </button>
+          <ul id="nav-menu" class="nav-menu">
+            <li><a href="index.html#prodi">Program Lain</a></li>
+                        <li><a href="#lab">Laboratorium</a></li>
+            <li><a href="#kurikulum">Kurikulum</a></li>
+            <li><a href="#kontak" class="btn btn-sm btn-primary">Kontak</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <section class="sub-hero">
+      <div class="container">
+        <div class="breadcrumbs">
+          <a href="index.html">Beranda</a>
+        </div>
+        <h1>Program Studi Fisika</h1>
+        <p class="section-sub" style="color: #e5edff">
+          Mempelajari hukum alam dari skala kuantum hingga kosmos dan
+          menerapkannya untuk teknologi masa depan.
+        </p>
+        <div class="key-stats">
+          <div class="k">
+            <div class="n">S1, S2 & S3</div>
+            <div>Jenjang</div>
+          </div>
+          <div class="k">
+            <div class="n">144 SKS</div>
+            <div>Beban Studi S1</div>
+          </div>
+          <div class="k">
+            <div class="n">ASIIN</div>
+            <div>Internationally Accredited by ASIIN</div>
+          </div>
+          <div class="k">
+            <div class="n">Kerja Sama</div>
+            <div>Industri & Riset</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <main id="main">
+      <section class="section">
+        <div class="container grid-1">
+          <div>
+            <style>p { text-align: justify; text-justify: inter-word; hyphens: auto; -webkit-hyphens: auto; -ms-hyphens: auto; }
+           
+            
+</style>
+            <h2 class="section-title">Profil</h2>
+            <p>
+              Departemen Fisika bernama Jurusan Fisika di bawah Fakultas Ilmu
+              Pasti dan Ilmu Pengetahuan Alam (FIPPA) yang didirikan pada
+              tanggal 17 Agustus 1963 di Makassar bersama dengan 3 jurusan
+              lainnya yaitu: Matematika, Kimia dan Biologi. Pada awalnya,
+              Jurusan Fisika dengan fasilitas dan sumber daya manusia (SDM) yang
+              sangat terbatas sehingga jurusan Fisika hanya mampu meluluskan
+              mahasiswanya sampai jenjang pendidikan Sarjana Muda. Selanjutnya,
+              menyelesaikan pendidikan Sarjana di UGM Yogyakarta atau ITB
+              Bandung dan kembali ke Unhas untuk mengabdikan dirinya sebagai
+              dosen. Kondisi ini berlangsung sampai dengan tahun 1980-an.
+              Penambahan fasilitas dan perkembangan SDM serta kerja sama dengan
+              beberapa instansi terkait baik negeri maupun swasta maka pada
+              tahun 1983 jurusan Fisika sudah mampu menghasilkan Sarjana Fisika
+              yang pertama (Drs. Piter Rampisela).
+            </p>
+            <p>
+              Pada masa kepemimpinan Prof. Dr. Achmad Amiruddin sebagai Rektor
+              Unhas, FIPPA termasuk Jurusan Fisika bergabung dengan Fakultas
+              Teknik dengan nama Fakultas Sains dan Teknologi. Pada tahun 1979,
+              jurusan Fisika membina peminatan Geologi yang selanjutnya menjadi
+              jurusan Geologi dan bergabung dengan Fakultas Teknik ketika pada
+              tahun 1983 Fakultas Sains dan Teknologi berpisah kembali dengan
+              nama Fakultas Matematika dan Ilmu Pengetahuan Alam (FMIPA) dan
+              Fakultas Teknik.
+            </p>
+            <p>
+              Tahun 1983 melalui SK Menteri Pendidikan dan Kebudayaan No.
+              0174/0/1983, Program Studi Fisika FMIPA Unhas resmi berdiri
+              sebagai bagian dari Jurusan Fisika.
+            </p>
+            <p>
+              Dengan semakin bertambahnya SDM yang dimiliki, pada tahun 1987
+              Jurusan Fisika mengembangkan diri dengan membentuk beberapa
+              Laboratorium sebagai tempat pengembangan bidang ilmu, yaitu:
+              Laboratorium Fisika Teori, Laboratorium Fisika Material dan
+              Energi, Laboratorium Elektronika, Laboratorium Fisika Optik dan
+              Laser, Laboratorium Geofisika, Workshop.
+            </p>
+            <p>
+              Seiring dengan perkembangan Ilmu Pengetahuan dan Teknologi, pada
+              tahun 1992 secara internal dibentuk peminatan Geofisika dan
+              laboratorium yang ada, direvisi menjadi: Laboratorium Fisika Teori
+              dan Komputasi, Laboratorium Fisika Material dan Energi,
+              Laboratorium Elektronika dan Instrumentasi, Laboratorium Fisika
+              Optik dan Spektroskopi, Laboratorium Geofisika, Workshop.
+            </p>
+            <p>
+              Pada tahun 1994 Peminatan Geofisika resmi menjadi Program Studi
+              Geofisika berdasarkan SK Direktorat Jenderal Pendidikan Tinggi
+              DEPDIKBUD No. 1637/D2/1994 tertanggal 2 Juni 1994 sehingga secara
+              resmi Jurusan Fisika membawahi 2 Program Studi, yaitu: Program
+              Studi Fisika dan Program Studi Geofisika serta Peminatan
+              Konsentrasi Fisika Medik yang resmi dibuka pada tahun 2006 sesuai
+              SK Rektor No. 1414/J04/0/2006 tentang Pembukaan Peminatan
+              Konsentrasi Fisika Medik.
+            </p>
+            <p> <strong>Program Studi Fisika</strong></p>
+            <p> <strong>Nama Program Studi :</strong> Program Studi Sarjana Fisika (S1)</p>
+            <p><strong>Email : </strong>phys@sci.unhas.ac.id</p>
+            <p> <strong>Website :</strong></p> 
+            <p><strong>Akreditasi BAN PT:</strong>  ASIIN </p>
+
+            <div
+              style="
+                margin-top: 0.75rem;
+                display: flex;
+                gap: 0.5rem;
+                flex-wrap: wrap;
+              "
+            >
+              <span class="pill">Pemodelan</span>
+              <span class="pill">Eksperimen</span>
+              <span class="pill">Komputasi</span>
+              <span class="pill">Instrumentasi</span>
+              <span class="pill">Material</span>
+            </div>
+          
+      </section>
+
+      <section id="kurikulum" class="section light">
+        <div class="container">
+          <h2 class="section-title center">Kurikulum Ringkas</h2>
+          <p class="section-sub center">
+            Struktur berbasis OBE dengan fondasi kuat dan pilihan peminatan
+            semester akhir.
+          </p>
+          <div class="syllabus">
+            <div>
+              <h3>Inti (Semester 1–4)</h3>
+              <ul class="list">
+                <li>Fisika Dasar I–II, Praktikum Dasar</li>
+                <li>Matematika Fisika I–II</li>
+                <li>Mekanika, Elektromagnetik, Termodinamika</li>
+                <li>Fisika Modern, Fisika Gelombang</li>
+                <li>Metode Numerik, Komputasi Ilmiah</li>
+              </ul>
+            </div>
+            <div>
+              <h3>Pilihan (Semester 5–8)</h3>
+              <ul class="list">
+                <li>Fisika Material & Energi</li>
+                <li>Elektronika & Instrumentasi</li>
+                <li>Fisika Teori & Komputasi</li>
+                <li>Spektroskopi Optik dan Fisika Medis</li>
+              </ul>
+            </div>
+          </div>
+          <p class="section-sub" style="text-align: center; margin-top: 1rem">
+            Detail silabus dan RPS tersedia berdasarkan permintaan.
+          </p>
+        </div>
+      </section>
+
+      <section id="lab" class="section">
+        <div class="container">
+          <h2 class="section-title center">Laboratorium Fisika</h2>
+          <p class="section-sub center">
+            Fasilitas untuk pembelajaran, penelitian, dan kolaborasi terapan.
+          </p>
+          <div class="labs">
+            <article class="lab">
+              <img
+                src="assets/img/lab-teori-dan-komputasi.jpg"
+                alt="Laboratorium fisika material dan energi"
+              />
+              <div class="b">
+                <h3><a
+                  href="lab-material-energi.html"
+                  class="link"
+                  style="text-decoration: none"
+                  >Lab Fisika Material & Energi</a
+                  >
+                  </h3>
+                <p>
+                  Kelompok Keahlian Fisika Material dan Energi dipimpin oleh Kepala Laboratorium dan beranggotakan dosen fisika, asisten laboratorium, dan mahasiswa yang sedang melakukan penelitian di bidang material dan energi. Kegiatan ini merupakan Kelompok Keahlian Fisika Material dan Energi.
+                </p>
+                <p>
+                  Mata kuliah dalam kelompok keahlian ini meliputi Fisika Benda Padat, Fisika Material, Fisika Keramik, Fisika Akustik, Energi Terbarukan, dan Fisika Semikonduktor.
+                </p>
+              </div>
+            </article>
+            <article class="lab">
+              <img
+                src="assets/img/lab-fisika-elektronika-instrumentasi.jpg"
+                alt="Laboratorium fisika elektronika dan instrumentasi"
+              />
+              <div class="b">
+                <h3><a
+                  href="lab-elektronika-instrumentasi.html"
+                  class="link"
+                  style="text-decoration: none"
+                  >Lab Fisika Elektronika & Instrumentasi</a
+                  >
+                  </h3>
+                <p>
+                  Kelompok keahlian Fisika Elektronika dan Instrumentasi PSF Universitas Hasanuddin menawarkan beberapa mata kuliah pilihan, antara lain: Mikroprosesor, Mikrokontroler dan Antarmuka, Kontrol Otomatis, Elektronika Lanjutan, dan Instrumentasi Medis. Mata kuliah instrumentasi medis merupakan mata kuliah wajib bagi mahasiswa jurusan Fisika Medis. Kelompok keahlian Sistem Elektronika dan Instrumentasi memiliki beberapa topik penelitian, antara lain: antena, sensor, dan instrumen ukur berbasis elektronika.
+                </p>
+              </div>
+            </article>
+            <article class="lab">
+              <img
+                src="assets/img/lab-teori-dan-komputasi.jpg"
+                alt="Laboratorium fisika teori dan komputasi"
+              />
+              <div class="b">
+                <h3><a
+                  href="lab-teori-komputasi.html"
+                  class="link"
+                  style="text-decoration: none"
+                  >Lab Fisika Teori & Komputasi</a
+                  >
+                  </h3>
+                <p>
+                  Kelompok Keahlian Fisika Teoritis dan Komputasi mencakup dua bidang, yaitu fisika teoretis dan fisika komputasional. Diskusi yang diadakan antara mahasiswa dan dosen setiap minggu merupakan kegiatan kelompok keahlian ini. Diskusi tersebut membahas program kreativitas mahasiswa, pengantar bahasa pemrograman, dan pengantar penelitian mahasiswa. Mata kuliah pilihan yang termasuk dalam kelompok keahlian ini adalah Aljabar Linear, Teori Perubahan Fasa, Pengantar Linux, Pengantar Pemrograman Internet, Teori Relativitas Umum, Mekanika Kuantum, Dinamika Non-Linear, dan Pengantar Teori Medan Kuantum.
+                </p>
+              </div>
+            </article>
+            <article class="lab">
+              <img
+                src="assets/img/lab-spektroskopi-optik-dan-fisika-medis.jpg"
+                alt="Laboratorium fisika optik dan fisika medis"
+              />
+              <div class="b">
+                <h3><a
+                  href="lab-optik-medis.html"
+                  class="link"
+                  style="text-decoration: none"
+                  >Lab Spektroskopi Optik dan Fisika Medis</a
+                  >
+                  </h3>
+                <p>
+                  Pada awalnya, kelompok keahlian ini bernama Kelompok Keahlian Optik dan Aplikasi Laser, yang keberadaannya dimulai pada tahun 1999. Seiring dengan perkembangan ilmu optik, pada tahun 2002 kelompok keahlian ini berubah menjadi Kelompok Riset Optik dan Spektroskopi.
+                </p>
+                <p>
+                Keberadaan KK ini didukung oleh beberapa peralatan, antara lain: 2 buah laser He-Ne (yang sekarang sudah tidak berfungsi), beberapa metode pengamatan, yaitu: Inferometer Mach Zender, Inferometer Fabri Ferot, dan lain-lain seperti meja optik, dudukan lensa dan cermin, serta power meter optik yang digunakan bersama dengan Kelompok Riset Sistem Elektronika dan Instrumentasi. Koperasi ini juga menyediakan kamar gelap (optik) untuk kegiatan optik yang biasanya bersesuaian dengan kamar gelap.
+                </p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="berita" class="section light">
+        <div class="container">
+          <div class="section-head">
+            <div>
+              <h2 class="section-title">Berita & Agenda</h2>
+              <p class="section-sub">
+                Sorotan kegiatan akademik, riset, dan prestasi terbaru.
+              </p>
+            </div>
+            <a href="#" class="btn btn-ghost">Arsip</a>
+          </div>
+          <div class="news">
+            <article class="news-card">
+              <img
+                src="https://images.unsplash.com/photo-1518779578993-ec3579fee39f?q=80&w=1200&auto=format&fit=crop"
+                alt="Seminar sains dan teknologi"
+              />
+              <div class="news-body">
+                <h3>Seminar Nasional Sains dan Inovasi 2025</h3>
+                <p>
+                  Topik: material cerdas, bioinformatika, dan AI untuk
+                  keberlanjutan.
+                </p>
+                <a href="#" class="link">Baca selengkapnya →</a>
+              </div>
+            </article>
+            <article class="news-card">
+              <img
+                src="https://images.unsplash.com/photo-1523580846011-d3a5bc25702b?q=80&w=1200&auto=format&fit=crop"
+                alt="Mahasiswa berprestasi menerima penghargaan"
+              />
+              <div class="news-body">
+                <h3>Mahasiswa FMIPA Raih Medali Emas KJI</h3>
+                <p>Tim interdisipliner menjuarai kompetisi inovasi nasional.</p>
+                <a href="#" class="link">Baca selengkapnya →</a>
+              </div>
+            </article>
+            <article class="news-card">
+              <img
+                src="https://images.unsplash.com/photo-1559757148-5c350d0d3c56?q=80&w=1200&auto=format&fit=crop"
+                alt="Jurnal riset bertema lingkungan"
+              />
+              <div class="news-body">
+                <h3>Publikasi Q1 Bidang Lingkungan</h3>
+                <p>
+                  Kolaborasi riset lintas negara terkait mitigasi perubahan
+                  iklim.
+                </p>
+                <a href="#" class="link">Baca selengkapnya →</a>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section light">
+        <div class="container">
+          <h2 class="section-title center">Staf & Dosen Kunci</h2>
+          <div class="staff">
+            <div class="person">
+              <div class="avatar">
+                <img
+                src="C:\Users\USERNAME\.qodo\fmipa-landing\assets\img/Prof. Dr. Dahlang Tahir, M.Si..jpg"
+                alt="PProf. Dr. Dahlang Tahir, M.Si..jpg"
+                >
+                <style>.avatar {
+  width: 120px;       /* Ukuran lingkaran */
+  height: 120px;      /* Wajib sama dengan width */
+  border-radius: 50%; /* Membuat bulat */
+  overflow: hidden;   /* Memotong sudut gambar */
+  margin: 0 auto;     /* Posisi tengah */
+}
+
+.avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;  /* KUNCI: Agar gambar penuh & proporsional */
+}</style>
+
+              </div>
+              <strong>Prof. Dr. Dahlang Tahir, M.Si.</strong>
+              <div class="muted">Fisika Material & Energi</div>
+            </div>
+            <div class="person">
+              <div class="avatar">
+                <img
+                class="avatar-shifted-up"
+                src="C:\Users\USERNAME\.qodo\fmipa-landing\assets\img/Prof. Dr. Bualkar Abdullah, M.Eng. Sc..jpg"
+                alt="Prof. Dr. Bualkar Abdullah, M.Eng. Sc..jpg"
+                >
+                <style>.avatar img.avatar-shifted-up{
+  width: 120px;       /* Ukuran lingkaran */
+  height: 120px;      /* Wajib sama dengan width */
+  border-radius: 50%; /* Membuat bulat */
+  overflow: hidden;   /* Memotong sudut gambar */
+  margin: 0 auto;     /* Posisi tengah */
+  transform: scale(1) translateY(10px); /* Ubah 10px menjadi negatif (-10px) jika ingin geser ke atas, positif ke bawah */
+}
+
+.avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;  /* KUNCI: Agar gambar penuh & proporsional */
+}</style>
+              </div>
+              <strong>Prof. Dr. Bualkar Abdullah, M.Eng. Sc.</strong>
+              <div class="muted">Elektronika & Instrumentasi</div>
+            </div>
+            <div class="person">
+              <div class="avatar"> 
+                <a href="profil-wira.html" class="person-link"></a>
+                <img
+                class="avatar-shifted-up"
+                src="C:\Users\USERNAME\.qodo\fmipa-landing\assets\img/Prof. Dr. rer-nat Wira Bahari Nurdin.jpg"
+                alt="Prof. Dr. rer-nat Wira Bahari Nurdin.jpg"
+                >
+                <style>.avatar img.avatar-shifted-up {
+  width: 120px;       /* Ukuran lingkaran */
+  height: 120px;      /* Wajib sama dengan width */
+  border-radius: 50%; /* Membuat bulat */
+  overflow: hidden;   /* Memotong sudut gambar */
+  margin: 0 auto;     /* Posisi tengah */
+    transform: scale(1) translateY(1px); /* Ubah 10px menjadi negatif (-10px) jika ingin geser ke atas, positif ke bawah */
+  
+}
+
+.avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;  /* KUNCI: Agar gambar penuh & proporsional */
+  
+}</style>
+              </div>
+              <strong>Prof. Dr. rer-nat Wira Bahari Nurdin</strong>
+              <div class="muted">Kepala Prodi - Fisika Teori & Komputasi</div>
+            </div>
+            <div class="person">
+              <div class="avatar">
+                 <img
+                src="C:\Users\USERNAME\.qodo\fmipa-landing\assets\img/Prof. Dr. Syamsir Dewang, M.Eng.Sc..jpg"
+                alt="Prof. Dr. Syamsir Dewang, M.Eng.Sc..jpg"
+                >
+                <style>.avatar {
+  width: 120px;       /* Ukuran lingkaran */
+  height: 120px;      /* Wajib sama dengan width */
+  border-radius: 50%; /* Membuat bulat */
+  overflow: hidden;   /* Memotong sudut gambar */
+  margin: 0 auto;     /* Posisi tengah */
+}
+
+.avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;  /* KUNCI: Agar gambar penuh & proporsional */
+}</style>
+              </div>
+              <strong>Prof. Dr. Syamsir Dewang, M.Eng.Sc.</strong>
+              <div class="muted">Spektroskopi Optik dan Fisika Medis</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <h2 class="section-title center">FAQ</h2>
+          <div class="faq">
+            <details>
+              <summary>Peluang Karier Lulusan Fisika?</summary>
+              <p>
+                Industri energi, material, elektronik, data sains, geoservices,
+                medik, R&D, konsultan, hingga akademisi.
+              </p>
+            </details>
+            <details>
+              <summary>Apakah tersedia program MBKM/magang?</summary>
+              <p>
+                Ya, tersedia magang industri, riset kolaboratif, dan pertukaran
+                pelajar dalam/luar negeri.
+              </p>
+            </details>
+            <details>
+              <summary>Prasyarat matematika/komputasi?</summary>
+              <p>
+                Dasar kalkulus, aljabar linear, dan pemrograman dasar
+                (Python/Matlab) sangat dianjurkan.
+              </p>
+            </details>
+            <details>
+              <summary>Bagaimana skema TA/Skripsi?</summary>
+              <p>
+                Topik dapat teoritik, eksperimen, atau komputasi; bimbingan 2
+                dosen; luaran publikasi/produk diutamakan.
+              </p>
+            </details>
+          </div>
+        </div>
+      </section>
+
+      <section id="kontak" class="cta section">
+        <div class="container cta-inner">
+          <div>
+            <h2 class="section-title">Ingin Bertanya Lebih Lanjut?</h2>
+            <p class="section-sub">
+              Hubungi sekretariat Prodi Fisika untuk informasi pendaftaran,
+              kunjungan lab, atau kerja sama.
+            </p>
+          </div>
+          <a href="index.html#kontak" class="btn btn-primary btn-lg"
+            >Hubungi Kami</a
+          >
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-grid">
+        <div>
+          <div class="brand brand-footer">
+            <img src="assets/img/logo.svg" alt="Logo FMIPA" class="logo" />
+            <div class="brand-text">
+              <span class="brand-title">FMIPA</span>
+              <span class="brand-sub">Program Studi Fisika</span>
+            </div>
+          </div>
+          <p class="muted">Hak Cipta © 2025 FMIPA.</p>
+        </div>
+        <nav aria-label="Tautan footer">
+          <h4>Tautan</h4>
+          <ul class="footer-links">
+            <li><a href="index.html#profil">Profil FMIPA</a></li>
+            <li><a href="#lab">Laboratorium</a></li>
+            <li><a href="#kurikulum">Kurikulum</a></li>
+            <li><a href="index.html#berita">Berita</a></li>
+          </ul>
+        </nav>
+        <div>
+          <h4>Newsletter</h4>
+          <form class="newsletter" onsubmit="return handleNewsletter(event)">
+            <input
+              type="email"
+              placeholder="Email Anda"
+              aria-label="Email untuk berlangganan"
+              required
+            />
+            <button class="btn btn-sm btn-ghost" type="submit">
+              Langganan
+            </button>
+          </form>
+        </div>
+      </div>
+    </footer>
+
+    <script src="assets/script.js"></script>
+  </body>
+</html>

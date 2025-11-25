@@ -1,0 +1,1126 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Laboratorium Fisika Teori & Komputasi FMIPA: riset, fasilitas, kegiatan, publikasi, dan kontak."
+    />
+    <title>FMIPA — Lab Fisika Teori & Komputasi</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assets/styles.css" />
+    <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml" />
+    <style>
+      .sub-hero {
+        background: linear-gradient(135deg, #0f3d91, #1a54c3);
+        color: #fff;
+        padding: 3rem 0;
+      }
+      .sub-hero h1 {
+        font-family: "Playfair Display", serif;
+        margin: 0;
+      }
+      .breadcrumbs {
+        margin-top: 0.5rem;
+        color: #c7d2fe;
+        font-size: 0.95rem;
+      }
+      .breadcrumbs a {
+        color: #e5edff;
+        text-decoration: none;
+      }
+      .breadcrumbs a:hover {
+        text-decoration: underline;
+      }
+      .hero-meta {
+        display: flex;
+        gap: 0.75rem;
+        flex-wrap: wrap;
+        margin-top: 0.75rem;
+      }
+      .pill {
+        display: inline-block;
+        background: #fff;
+        border: 1px solid #e6eeff;
+        color: #0f3d91;
+        border-radius: 999px;
+        padding: 0.25rem 0.6rem;
+        font-weight: 700;
+        font-size: 0.9rem;
+      }
+      .grid-2 {
+        display: grid;
+        grid-template-columns: 1.25fr 1fr;
+        gap: 1.25rem;
+      }
+      .gallery {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 0.5rem;
+      }
+      .gallery img {
+        width: 100%;
+        aspect-ratio: 4/3;
+        object-fit: cover;
+        border-radius: 10px;
+      }
+      .card {
+        background: #fff;
+        border: 1px solid #e6eeff;
+        border-radius: 14px;
+        padding: 1rem;
+      }
+      .list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+      .list li {
+        padding: 0.5rem 0.6rem;
+        border: 1px solid #e6eeff;
+        border-radius: 10px;
+        margin-bottom: 0.5rem;
+        background: #fff;
+      }
+      .section-sub.justify p,
+      .justify p {
+        text-align: justify;
+        text-justify: inter-word;
+        hyphens: auto;
+        -webkit-hyphens: auto;
+        -ms-hyphens: auto;
+      }
+      @media (max-width: 960px) {
+        .grid-2 {
+          grid-template-columns: 1fr;
+        }
+        .gallery {
+          grid-template-columns: repeat(2, 1fr);
+        }
+      }
+      @media (max-width: 640px) {
+        .gallery {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Lewati ke konten</a>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="brand" href="index.html" aria-label="Beranda FMIPA">
+          <img src="assets/img/logo.svg" alt="Logo FMIPA" class="logo" />
+          <div class="brand-text">
+            <span class="brand-title">FMIPA</span>
+            <span class="brand-sub">Program Studi Fisika</span>
+          </div>
+        </a>
+        <nav class="nav" aria-label="Navigasi utama">
+          <button
+            class="nav-toggle"
+            aria-expanded="false"
+            aria-controls="nav-menu"
+            aria-label="Buka menu"
+          >
+            <span class="bar"></span><span class="bar"></span
+            ><span class="bar"></span>
+          </button>
+          <ul id="nav-menu" class="nav-menu">
+            <li><a href="index.html#prodi">Program Lain</a></li>
+            <li><a href="#fasilitas">Fasilitas</a></li>
+            <li><a href="#riset">Riset</a></li>
+            <li><a href="#publikasi">Publikasi</a></li>
+            <li><a href="dosen.html" class="link">Dosen</a></li>
+            <li><a href="#kontak" class="btn btn-sm btn-primary">Kontak</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <section class="sub-hero">
+      <div class="container">
+        <div class="breadcrumbs">
+          <a href="index.html">Beranda</a> /
+          <strong>Lab Teori & Komputasi</strong>
+        </div>
+        <h1>Lab Fisika Teori & Komputasi</h1>
+        <p class="section-sub" style="color: #e5edff">
+          Pemodelan teoritik, simulasi numerik, dan komputasi ilmiah untuk
+          memahami fenomena fisika dari skala mikro hingga kosmik.
+        </p>
+        <div class="hero-meta">
+          <span class="pill">Pemodelan</span>
+          <span class="pill">Simulasi Numerik</span>
+          <span class="pill">Komputasi Ilmiah</span>
+          <span class="pill">Data Sains</span>
+        </div>
+      </div>
+    </section>
+
+    <main id="main">
+      <section class="section">
+        <div class="container grid-2">
+          <div class="justify">
+            <h2 class="section-title">Profil Singkat</h2>
+            <p>
+              Kelompok Keahlian Fisika Teoritis dan Komputasi mencakup dua
+              bidang, yaitu fisika teoretis dan fisika komputasional. Diskusi
+              yang diadakan antara mahasiswa dan dosen setiap minggu merupakan
+              kegiatan kelompok keahlian ini. Diskusi tersebut membahas program
+              kreativitas mahasiswa, pengantar bahasa pemrograman, dan pengantar
+              penelitian mahasiswa. Mata kuliah pilihan yang termasuk dalam
+              kelompok keahlian ini adalah Aljabar Linear, Teori Perubahan Fasa,
+              Pengantar Linux, Pengantar Pemrograman Internet, Teori Relativitas
+              Umum, Mekanika Kuantum, Dinamika Non-Linear, dan Pengantar Teori
+              Medan Kuantum.
+            </p>
+            <img
+              src="assets/img/lab-teori-dan-komputasi.jpg"
+              alt="Laboratorium fisika teori dan komputasi"
+            />
+          </div>
+          <aside class="card">
+            <h3>Kontak Laboratorium</h3>
+            <ul class="list">
+              <li>
+                <strong>Koordinator:</strong> Prof. Dr. rer-nat Wira Bahari
+                Nurdin
+              </li>
+              <li><strong>Email:</strong> teori-komputasi@fmipa.ac.id</li>
+              <li><strong>Lokasi:</strong> Gedung Fisika, Lantai 2</li>
+            </ul>
+            <a class="btn btn-sm btn-primary" href="#kontak">Hubungi</a>
+          </aside>
+        </div>
+      </section>
+
+      <section id="fasilitas" class="section light">
+        <div class="container">
+          <h2 class="section-title center">Fasilitas</h2>
+          <p class="section-sub center">
+            Dukungan komputasi modern dan perangkat lunak ilmiah.
+          </p>
+          <div class="gallery" style="margin-top: 1rem">
+            <img
+              src="assets/img/fasilitas-teori-1.jpg"
+              alt="Fasilitas Teori 1"
+            />
+            <img
+              src="https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1200&auto=format&fit=crop"
+              alt="HPC Cluster"
+            />
+            <img
+              src="https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?q=80&w=1200&auto=format&fit=crop"
+              alt="Visualisasi data"
+            />
+          </div>
+          <div class="grid-2" style="margin-top: 1rem">
+            <div class="card">
+              <h3>Perangkat Keras</h3>
+              <ul class="list">
+                <li>GPU Workstation (CUDA/OpenCL)</li>
+                <li>Mini HPC/Cluster internal</li>
+                <li>Storage NAS untuk dataset</li>
+              </ul>
+            </div>
+            <div class="card">
+              <h3>Perangkat Lunak</h3>
+              <ul class="list">
+                <li>Python/Julia/Matlab, NumPy, SciPy, JAX</li>
+                <li>COMSOL, LAMMPS, OpenFOAM</li>
+                <li>Tools visualisasi: ParaView, matplotlib</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+<section class="section light">
+  <div class="container">
+    <h2 class="section-title">
+      Mata Kuliah Pilihan Laboratorium Teori dan Komputasi
+    </h2>
+
+    <div class="table-wrapper">
+      <table class="courses-table">
+        <thead>
+          <tr>
+            <th rowspan="2">No</th>
+            <th rowspan="2">Fokus Penelitian (TA)</th>
+            <th colspan="2">Courses</th>
+          </tr>
+          <tr>
+            <th>Semester 5</th>
+            <th>Semester 6</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td>Condensed Matter Physics</td>
+            <td>
+              <a href="https://sikola-v2.unhas.ac.id/course/view.php?id=92175" target="_blank">Pengantar Linux</a><br>
+              <a href="https://sikola-v2.unhas.ac.id/course/view.php?id=92184" target="_blank">Mekanika Kuantum</a>
+            </td>
+            <td>
+              <a href="https://sikola-v2.unhas.ac.id/course/view.php?id=92181" target="_blank">Fisika Teoritik Bahan Mampat</a><br>
+              <a href="https://sikola-v2.unhas.ac.id/enrol/index.php?id=92187" target="_blank">Teori Perubahan Fase</a>
+            </td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>Cosmology</td>
+            <td>
+              <a href="https://sikola-v2.unhas.ac.id/course/view.php?id=92173" target="_blank">Fisika Matematika III</a><br>
+              <a href="https://sikola-v2.unhas.ac.id/course/view.php?id=92170" target="_blank">Teori Relativitas Umum</a>
+            </td>
+            <td>
+              <a href="https://sikola-v2.unhas.ac.id/course/view.php?id=92191" target="_blank">Dinamika Nonlinier</a>
+            </td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>Particle Physics</td>
+            <td>
+              <a href="https://sikola-v2.unhas.ac.id/course/view.php?id=92173" target="_blank">Fisika Matematika III</a><br>
+              <a href="https://sikola-v2.unhas.ac.id/course/view.php?id=92184" target="_blank">Mekanika Kuantum</a>
+            </td>
+            <td>
+              <a href="https://sikola-v2.unhas.ac.id/course/view.php?id=92191" target="_blank">Dinamika Nonlinier</a>
+            </td>
+          </tr>
+          <tr>
+            <td>4</td>
+            <td>Computation</td>
+            <td>
+              <a href="https://sikola-v2.unhas.ac.id/course/view.php?id=92175" target="_blank">Pengantar Linux</a><br>
+              <a href="https://sikola-v2.unhas.ac.id/course/view.php?id=92177" target="_blank">Pengantar Pemrograman Internet</a>
+            </td>
+            <td>
+              <a href="https://sikola-v2.unhas.ac.id/course/view.php?id=92168" target="_blank">Pembelajaran Mesin</a><br>
+              <a href="https://sikola-v2.unhas.ac.id/course/view.php?id=92191" target="_blank">Dinamika Nonlinier</a>
+            </td>
+          </tr>
+          <tr>
+            <td>5</td>
+            <td>Nuclear Physics</td>
+            <td><!-- Belum ada mata kuliah semester 5 di gambar --></td>
+            <td>
+              <a href="https://sikola-v2.unhas.ac.id/enrol/index.php?id=92151 " target="_blank">Kedokteran Nuklir</a>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+
+<style>.table-wrapper {
+  width: 100%;
+  overflow-x: auto;
+  margin-top: 1.5rem;
+}
+
+.courses-table a {
+  color: inherit; /* Mengambil warna teks default */
+  text-decoration: none; /* Menghilangkan garis bawah pada tautan */
+}
+
+.courses-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.95rem;
+  background-color: #ffffff;
+
+  /* 👇 tambahan untuk menyamakan Semester 5 & 6 */
+  table-layout: fixed;
+}
+
+.courses-table thead th {
+  text-align: center;
+  padding: 0.75rem;
+  border: 1px solid #d0d7e2;
+}
+
+.courses-table tbody td {
+  padding: 0.6rem 0.75rem;
+  border: 1px solid #d0d7e2;
+  vertical-align: top;
+}
+
+/* Baris judul COURSES */
+.courses-table thead tr:first-child th {
+  background: #40b7dd;
+  color: #ffffff;
+  font-weight: 600;
+}
+
+/* Header SEMESTER 5 & 6 */
+.courses-table thead tr:nth-child(2) th:nth-child(3) {
+  background: #a7d76f; /* hijau muda */
+  color: #000;
+}
+
+.courses-table thead tr:nth-child(2) th:nth-child(4) {
+  background: #40b7dd; /* biru */
+  color: #fff;
+}
+
+/* Kolom NO */
+.courses-table thead th:first-child,
+.courses-table tbody td:first-child {
+  text-align: center;
+  width: 60px;
+}
+
+/* Kolom fokus penelitian */
+.courses-table tbody td:nth-child(2) {
+  font-weight: 600;
+}
+
+/* 👇 tambahan untuk menyetarakan Semester 5 & 6 */
+.courses-table th:nth-child(3),
+.courses-table td:nth-child(3),
+.courses-table th:nth-child(4),
+.courses-table td:nth-child(4) {
+  width: 50%;
+}
+
+/* Sedikit zebra effect */
+.courses-table tbody tr:nth-child(odd) {
+  background-color: #f8fafc;
+}
+
+/* Responsif di layar kecil */
+@media (max-width: 600px) {
+  .courses-table {
+    font-size: 0.85rem;
+  }
+}
+</style>
+
+      <section id="publikasi" class="section light">
+        <div class="container">
+          <h2 class="section-title center">Publikasi Pilihan</h2>
+          <p class="section-sub center">
+            Contoh publikasi/karya terbaru (placeholder).
+          </p>
+          <div class="grid-2" style="margin-top: 1rem">
+            <div class="card">
+              <strong>2024</strong> — Simulasi transport panas pada material 2D
+              dengan FDM adaptif.
+            </div>
+            <div class="card">
+              <strong>2023</strong> — Analisis chaos pada sistem driven-damped
+              dan implikasi kontrol.
+            </div>
+            <div class="card">
+              <strong>2023</strong> — Monte Carlo pada model Ising 2D: optimasi
+              GPU.
+            </div>
+            <div class="card">
+              <strong>2022</strong> — Inversi seismik 2D menggunakan optimasi
+              hibrida.
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section
+        class="section"
+        id="mahasiswa"
+        style="padding: 4rem 0; background-color: #fff"
+      >
+        <div class="container">
+          <h2 class="section-title" style="color: #0f3d91; margin-bottom: 10px">
+            Mahasiswa & Tugas Akhir
+          </h2>
+          <p class="section-sub" style="margin-bottom: 30px; color: #666">
+            Daftar mahasiswa aktif yang sedang melakukan penelitian di
+            Laboratorium Fisika Teori & Komputasi.
+          </p>
+
+          <div class="table-responsive">
+            <table class="student-table">
+              <thead>
+                <tr>
+                  <th width="5%">No</th>
+                  <th width="20%">Nama Mahasiswa</th>
+                  <th width="15%">NIM</th>
+                  <th>Judul Penelitian</th>
+                  <th width="25%">Pembimbing</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1</td>
+                  <td><strong>Maghfira Izzani</strong></td>
+                  <td>H011191005</td>
+                  <td>
+                    Studi Absorpsi Energi dan Stabilitas Struktur Perovskite
+                    Halida Ganda Cs2AgBiBr6
+                  </td>
+                  <td>
+                    1. Prof. Dr. rer.nat Wira Bahari Nurdin<br />2. Dr. Azwar
+                    Sutiono, M.Si
+                  </td>
+                </tr>
+
+                <tr>
+                  <td>2</td>
+                  <td><strong>Muh. Fadel</strong></td>
+                  <td>H011191012</td>
+                  <td>
+                    Studi Sifat Elektronik dan Optik Senyawa Perovskite Halida
+                    Ganda Cs2AgBiBr6
+                  </td>
+                  <td>
+                    1. Prof. Dr. Tasrief Surungan, M.Sc<br />2. Bayu Dirgantara,
+                    SST., Ph.D
+                  </td>
+                </tr>
+
+                <tr>
+                  <td>3</td>
+                  <td><strong>Nur Anisah</strong></td>
+                  <td>H011191024</td>
+                  <td>
+                    Analisis Sifat Termodinamika Bahan Perovskite Halida Ganda
+                    Menggunakan DFT
+                  </td>
+                  <td>
+                    1. Prof. Dr. rer.nat Wira Bahari Nurdin<br />2. Drs.
+                    Bangsawan BJ., M.Si
+                  </td>
+                </tr>
+
+                <tr>
+                  <td>4</td>
+                  <td><strong>Rizki Amalia</strong></td>
+                  <td>H011191033</td>
+                  <td>
+                    Sifat Termodinamika dan Optik Material Perovskite Halida
+                    Ganda Cs2AgBiBr6
+                  </td>
+                  <td>
+                    1. Prof. Dr. Tasrief Surungan, M.Sc<br />2. Dr. Azwar
+                    Sutiono, M.Si
+                  </td>
+                </tr>
+
+                <tr>
+                  <td>5</td>
+                  <td><strong>Siti Rahmawati</strong></td>
+                  <td>H011191045</td>
+                  <td>
+                    Perancangan Sistem Deteksi Dini Kebakaran Hutan Menggunakan
+                    Algoritma Fuzzy Logic
+                  </td>
+                  <td>
+                    1. Prof. Dr. rer.nat Wira Bahari Nurdin<br />2. Bayu
+                    Dirgantara, SST., Ph.D
+                  </td>
+                </tr>
+
+                <tr>
+                  <td>6</td>
+                  <td><strong>Annisa Nurul Fadhilah</strong></td>
+                  <td>H011191052</td>
+                  <td>
+                    Pemodelan Dinamika Molekuler Transisi Fase pada Material
+                    Magnetik
+                  </td>
+                  <td>
+                    1. Prof. Dr. Tasrief Surungan, M.Sc<br />2. Drs. Bangsawan
+                    BJ., M.Si
+                  </td>
+                </tr>
+
+                <tr>
+                  <td>7</td>
+                  <td><strong>M. Rifqi Fathurrahman</strong></td>
+                  <td>H011191061</td>
+                  <td>
+                    Analisis Kestabilan Struktur Material Perovskite Bebas
+                    Timbal untuk Aplikasi Sel Surya
+                  </td>
+                  <td>
+                    1. Prof. Dr. rer.nat Wira Bahari Nurdin<br />2. Dr. Azwar
+                    Sutiono, M.Si
+                  </td>
+                </tr>
+
+                <tr>
+                  <td>8</td>
+                  <td><strong>Nurul Hikmah</strong></td>
+                  <td>H011191072</td>
+                  <td>
+                    Simulasi Monte Carlo Model Ising 3D pada Kisi Kubus
+                    Sederhana
+                  </td>
+                  <td>
+                    1. Prof. Dr. Tasrief Surungan, M.Sc<br />2. Bayu Dirgantara,
+                    SST., Ph.D
+                  </td>
+                </tr>
+
+                <tr>
+                  <td>9</td>
+                  <td><strong>Ahmad Fauzan</strong></td>
+                  <td>H011191085</td>
+                  <td>
+                    Studi Komputasi Material Anoda Baterai Li-ion Berbasis
+                    Silikon
+                  </td>
+                  <td>
+                    1. Prof. Dr. rer.nat Wira Bahari Nurdin<br />2. Drs.
+                    Bangsawan BJ., M.Si
+                  </td>
+                </tr>
+
+                <tr>
+                  <td>10</td>
+                  <td><strong>Dwi Putri Lestari</strong></td>
+                  <td>H011191092</td>
+                  <td>
+                    Perhitungan Struktur Pita Energi Material Graphene Doping
+                    Nitrogen
+                  </td>
+                  <td>
+                    1. Prof. Dr. Tasrief Surungan, M.Sc<br />2. Dr. Azwar
+                    Sutiono, M.Si
+                  </td>
+                </tr>
+
+                <tr>
+                  <td>11</td>
+                  <td><strong>Muh. Arifuddin</strong></td>
+                  <td>H011201003</td>
+                  <td>
+                    Analisis Sifat Magnetik Material Heusler Alloy Co2MnSi
+                  </td>
+                  <td>
+                    1. Prof. Dr. rer.nat Wira Bahari Nurdin<br />2. Prof. Dr.
+                    Tasrief Surungan, M.Sc
+                  </td>
+                </tr>
+
+                <tr>
+                  <td>12</td>
+                  <td><strong>Sri Wahyuni</strong></td>
+                  <td>H011201015</td>
+                  <td>
+                    Pemodelan Difusi Gas pada Membran Polimer Menggunakan
+                    Dinamika Molekuler
+                  </td>
+                  <td>
+                    1. Prof. Dr. Tasrief Surungan, M.Sc<br />2. Bayu Dirgantara,
+                    SST., Ph.D
+                  </td>
+                </tr>
+
+                <tr>
+                  <td>13</td>
+                  <td><strong>Kurniawan</strong></td>
+                  <td>H011201028</td>
+                  <td>
+                    Studi Sifat Optoelektronik Material ZnO Doping Mg untuk
+                    Aplikasi LED
+                  </td>
+                  <td>
+                    1. Prof. Dr. rer.nat Wira Bahari Nurdin<br />2. Drs.
+                    Bangsawan BJ., M.Si
+                  </td>
+                </tr>
+
+                <tr>
+                  <td>14</td>
+                  <td><strong>Fitriani</strong></td>
+                  <td>H011201042</td>
+                  <td>
+                    Simulasi Dinamika Fluida pada Pipa Venturi Menggunakan
+                    Metode Elemen Hingga
+                  </td>
+                  <td>
+                    1. Prof. Dr. Tasrief Surungan, M.Sc<br />2. Dr. Azwar
+                    Sutiono, M.Si
+                  </td>
+                </tr>
+
+                <tr>
+                  <td>15</td>
+                  <td><strong>Abdul Rahman</strong></td>
+                  <td>H011201055</td>
+                  <td>
+                    Analisis Perubahan Iklim Menggunakan Model Sirkulasi Umum
+                    (GCM)
+                  </td>
+                  <td>
+                    1. Prof. Dr. rer.nat Wira Bahari Nurdin<br />2. Drs.
+                    Bangsawan BJ., M.Si
+                  </td>
+                </tr>
+
+                <tr>
+                  <td>16</td>
+                  <td><strong>Nur Indah Sari</strong></td>
+                  <td>H011201067</td>
+                  <td>
+                    Studi Sifat Termoelektrik Material SnSe untuk Konversi
+                    Energi Panas
+                  </td>
+                  <td>
+                    1. Prof. Dr. Tasrief Surungan, M.Sc<br />2. Bayu Dirgantara,
+                    SST., Ph.D
+                  </td>
+                </tr>
+
+                <tr>
+                  <td>17</td>
+                  <td><strong>M. Hidayatullah</strong></td>
+                  <td>H011201078</td>
+                  <td>
+                    Analisis Kinerja Sel Surya Perovskite Menggunakan Simulasi
+                    SCAPS-1D
+                  </td>
+                  <td>
+                    1. Prof. Dr. rer.nat Wira Bahari Nurdin<br />2. Dr. Azwar
+                    Sutiono, M.Si
+                  </td>
+                </tr>
+
+                <tr>
+                  <td>18</td>
+                  <td><strong>Rina Astuti</strong></td>
+                  <td>H011201089</td>
+                  <td>
+                    Pemodelan Transport Polutan pada Aliran Sungai Menggunakan
+                    Persamaan Adveksi-Difusi
+                  </td>
+                  <td>
+                    1. Prof. Dr. Tasrief Surungan, M.Sc<br />2. Drs. Bangsawan
+                    BJ., M.Si
+                  </td>
+                </tr>
+
+                <tr>
+                  <td>19</td>
+                  <td><strong>Budi Santoso</strong></td>
+                  <td>H011201095</td>
+                  <td>
+                    Simulasi Monte Carlo Transisi Fase pada Model Potts 3-State
+                  </td>
+                  <td>
+                    1. Prof. Dr. rer.nat Wira Bahari Nurdin<br />2. Prof. Dr.
+                    Tasrief Surungan, M.Sc
+                  </td>
+                </tr>
+
+                <tr>
+                  <td>20</td>
+                  <td><strong>Dewi Sartika</strong></td>
+                  <td>H011211005</td>
+                  <td>
+                    Studi Sifat Mekanik Material Komposit Serat Alam Menggunakan
+                    Metode Elemen Hingga
+                  </td>
+                  <td>
+                    1. Prof. Dr. Tasrief Surungan, M.Sc<br />2. Bayu Dirgantara,
+                    SST., Ph.D
+                  </td>
+                </tr>
+
+                <tr>
+                  <td>21</td>
+                  <td><strong>Nurul Izzah</strong></td>
+                  <td>H011211015</td>
+                  <td>
+                    Analisis Struktur Pita Energi Heterostruktur Graphene/MoS2
+                  </td>
+                  <td>
+                    1. Prof. Dr. rer.nat Wira Bahari Nurdin<br />2. Drs.
+                    Bangsawan BJ., M.Si
+                  </td>
+                </tr>
+
+                <tr>
+                  <td>22</td>
+                  <td><strong>M. Akbar</strong></td>
+                  <td>H011211028</td>
+                  <td>
+                    Simulasi Dinamika Molekuler Interaksi Obat dengan Protein
+                    Reseptor
+                  </td>
+                  <td>
+                    1. Prof. Dr. Tasrief Surungan, M.Sc<br />2. Dr. Azwar
+                    Sutiono, M.Si
+                  </td>
+                </tr>
+
+                <tr>
+                  <td>23</td>
+                  <td><strong>Risky Ramadhan</strong></td>
+                  <td>H011211035</td>
+                  <td>
+                    Studi Sifat Optik Nanopartikel Emas Menggunakan Teori Mie
+                  </td>
+                  <td>
+                    1. Prof. Dr. rer.nat Wira Bahari Nurdin<br />2. Bayu
+                    Dirgantara, SST., Ph.D
+                  </td>
+                </tr>
+
+                <tr>
+                  <td>24</td>
+                  <td><strong>Aulia Putri</strong></td>
+                  <td>H011211048</td>
+                  <td>Pemodelan Transport Elektron pada Nanowire Silikon</td>
+                  <td>
+                    1. Prof. Dr. Tasrief Surungan, M.Sc<br />2. Drs. Bangsawan
+                    BJ., M.Si
+                  </td>
+                </tr>
+
+                <tr>
+                  <td>25</td>
+                  <td><strong>Fajar Siddiq</strong></td>
+                  <td>H011211055</td>
+                  <td>
+                    Analisis Termodinamika Siklus Rankine Organik untuk
+                    Pembangkit Listrik
+                  </td>
+                  <td>
+                    1. Prof. Dr. rer.nat Wira Bahari Nurdin<br />2. Dr. Azwar
+                    Sutiono, M.Si
+                  </td>
+                </tr>
+
+                <tr>
+                  <td>26</td>
+                  <td><strong>Nanda Aulia</strong></td>
+                  <td>H011211062</td>
+                  <td>
+                    Simulasi Monte Carlo Perambatan Foton pada Jaringan Biologis
+                  </td>
+                  <td>
+                    1. Prof. Dr. Tasrief Surungan, M.Sc<br />2. Drs. Bangsawan
+                    BJ., M.Si
+                  </td>
+                </tr>
+
+                <tr>
+                  <td>27</td>
+                  <td><strong>Dimas Pratama</strong></td>
+                  <td>H011211075</td>
+                  <td>Studi DFT Material Katoda Na-ion Battery</td>
+                  <td>
+                    1. Prof. Dr. rer.nat Wira Bahari Nurdin<br />2. Bayu
+                    Dirgantara, SST., Ph.D
+                  </td>
+                </tr>
+
+                <tr>
+                  <td>28</td>
+                  <td><strong>Angga Anugrah</strong></td>
+                  <td>H011211085</td>
+                  <td>
+                    Sintesis dan Karakterisasi Komposit ZnO/TiO2 untuk Aplikasi
+                    Fotokatalis
+                  </td>
+                  <td>
+                    1. Prof. Dr. Tasrief Surungan, M.Sc<br />2. Dr. Azwar
+                    Sutiono, M.Si
+                  </td>
+                </tr>
+
+                <tr>
+                  <td>29</td>
+                  <td><strong>Siti Nurhaliza</strong></td>
+                  <td>H011211092</td>
+                  <td>Analisis Sifat Magnetik Lapisan Tipis Feromagnetik</td>
+                  <td>
+                    1. Prof. Dr. Tasrief Surungan, M.Sc<br />2. Bayu Dirgantara,
+                    SST., Ph.D
+                  </td>
+                </tr>
+
+                <tr>
+                  <td>30</td>
+                  <td><strong>Muh. Ihsan</strong></td>
+                  <td>H011211098</td>
+                  <td>Pemodelan Difusi Polutan Udara di Kawasan Industri</td>
+                  <td>
+                    1. Prof. Dr. rer.nat Wira Bahari Nurdin<br />2. Drs.
+                    Bangsawan BJ., M.Si
+                  </td>
+                </tr>
+
+                <tr>
+                  <td>31</td>
+                  <td><strong>Rini Anggraeni</strong></td>
+                  <td>H011221005</td>
+                  <td>Studi Sifat Termoelektrik Material Bi2Te3 Doping Se</td>
+                  <td>
+                    1. Prof. Dr. Tasrief Surungan, M.Sc<br />2. Dr. Azwar
+                    Sutiono, M.Si
+                  </td>
+                </tr>
+
+                <tr>
+                  <td>32</td>
+                  <td><strong>Ardiansyah</strong></td>
+                  <td>H011221018</td>
+                  <td>
+                    Analisis Stabilitas Perovskite Organik-Anorganik Terhadap
+                    Kelembaban
+                  </td>
+                  <td>
+                    1. Prof. Dr. rer.nat Wira Bahari Nurdin<br />2. Bayu
+                    Dirgantara, SST., Ph.D
+                  </td>
+                </tr>
+
+                <tr>
+                  <td>33</td>
+                  <td><strong>Widya Astuti</strong></td>
+                  <td>H011221025</td>
+                  <td>
+                    Simulasi Dinamika Fluida Komputasi (CFD) pada Turbin Angin
+                    Sumbu Vertikal
+                  </td>
+                  <td>
+                    1. Prof. Dr. Tasrief Surungan, M.Sc<br />2. Drs. Bangsawan
+                    BJ., M.Si
+                  </td>
+                </tr>
+
+                <tr>
+                  <td>34</td>
+                  <td><strong>Putra Pratama</strong></td>
+                  <td>H011221038</td>
+                  <td>Studi Sifat Elektronik Graphene Bilayer Twisted</td>
+                  <td>
+                    1. Prof. Dr. rer.nat Wira Bahari Nurdin<br />2. Dr. Azwar
+                    Sutiono, M.Si
+                  </td>
+                </tr>
+
+                <tr>
+                  <td>35</td>
+                  <td><strong>Faisal Tanjung</strong></td>
+                  <td>H011221058</td>
+                  <td>Pemodelan Transport Ion pada Membran Penukar Proton</td>
+                  <td>
+                    1. Prof. Dr. rer.nat Wira Bahari Nurdin<br />2. Bayu
+                    Dirgantara, SST., Ph.D
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <section class="section light">
+        <div class="container">
+          <h2 class="section-title center">Staf & Dosen</h2>
+
+          <div class="staff">
+            <div class="person">
+             <div class="avatar">
+               <img
+               class="person-link"
+               src="assets/img/prof-dr-rer-nat-wira-bahari-nurdin.jpg"
+               alt="Prof. Wira"
+               />
+              </div>
+              <strong>
+               <a href="profil-wira.html" class="person-link">
+               Prof. Dr. rer-nat Wira Bahari Nurdin
+               </a>
+               <style>
+                .staff .person strong a {
+                color: #1f2937;          /* abu/Hitam */
+               text-decoration: none;
+               }
+
+               .staff .person strong a:hover {
+               color: #0f3d91;          /* biru saat hover */
+               text-decoration: underline;
+                }
+               </style>
+              </strong>
+               <div class="muted">Kepala Prodi - Lektor Kepala / IV.d</div>
+              </div>
+
+
+
+            <div class="person">
+              <div class="avatar">
+                <img
+                  src="assets/img/prof-dr-tasrief-surungan-m-sc.jpg"
+                  alt="Prof Tasrief"
+                />
+              </div>
+              <strong>
+                 <a href="profil-tasrief.html" class="person-link">
+                 Prof. Dr. Tasrief Surungan, M.Sc
+                 </a>
+                 <style>
+                .staff .person strong a {
+                color: #1f2937;          /* abu/Hitam */
+               text-decoration: none;
+               }
+
+               .staff .person strong a:hover {
+               color: #0f3d91;          /* biru saat hover */
+               text-decoration: underline;
+                }
+               </style>
+              </strong>
+              <div class="muted">Guru Besar / IV.c</div>
+            </div>
+
+            <div class="person">
+              <div class="avatar">
+                <img
+                  src="assets/img/drs-bansawang-bj-m-sc.jpg"
+                  alt="Prof Bangsawang"
+                />
+              </div>
+              <strong>
+                <a href="profil-bangsawan.html" class="person-link">
+                 Drs. Bansawang BJ, M.Sc
+                 </a>
+                 <style>
+                .staff .person strong a {
+                color: #1f2937;          /* abu/Hitam */
+               text-decoration: none;
+               }
+
+               .staff .person strong a:hover {
+               color: #0f3d91;          /* biru saat hover */
+               text-decoration: underline;
+                }
+               </style>
+              </strong>
+              <div class="muted">Lektor Kepala / IV.a</div>
+            </div>
+
+            <div class="person">
+              <div class="avatar">
+                <img
+                  src="assets/img/eko-juarlin.jpg"
+                  alt="Prof. Syamsir"
+                />
+              </div>
+              <strong>Eko Juarlin, S.Si., M.Si.</strong>
+              <div class="muted">Lektor / III.d</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <style>
+        .staff {
+          display: flex; 
+          justify-content: center; 
+          gap: 30px; 
+          flex-wrap: wrap;
+          margin-top: 30px;
+        }
+        .person {
+          text-align: center; 
+          width: 220px; 
+        }
+        .avatar {
+          width: 120px;
+          height: 120px;
+          border-radius: 50%;
+          overflow: hidden;
+          margin: 0 auto 15px; 
+          background-color: #e6f0ff; 
+          border: 3px solid white; 
+          box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /* Bayangan halus */
+        }
+
+        /* 4. Mengatur Gambar Dasar */
+        .avatar img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover; /* Wajib: Agar tidak gepeng */
+          display: block;
+        }
+
+        /* 5. KHUSUS: Geser Foto (Prof Wira) */
+        .avatar img.shifted-up {
+          transform: scale(1.2) translateY(10px); /* Zoom & Geser */
+        }
+      </style>
+      <section id="kontak" class="cta section">
+        <div class="container cta-inner">
+          <div>
+            <h2 class="section-title">Kolaborasi atau Magang?</h2>
+            <p class="section-sub">
+              Kami membuka peluang kolaborasi riset, proyek tugas akhir, dan
+              magang komputasi ilmiah.
+            </p>
+          </div>
+          <a
+            href="mailto:teori-komputasi@fmipa.ac.id"
+            class="btn btn-primary btn-lg"
+            >Email Lab</a
+          >
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-grid">
+        <div>
+          <div class="brand brand-footer">
+            <img src="assets/img/logo.svg" alt="Logo FMIPA" class="logo" />
+            <div class="brand-text">
+              <span class="brand-title">FMIPA</span>
+              <span class="brand-sub">Program Studi Fisika</span>
+            </div>
+          </div>
+          <p class="muted">Hak Cipta © 2025 FMIPA.</p>
+        </div>
+        <nav aria-label="Tautan footer">
+          <h4>Tautan</h4>
+          <ul class="footer-links">
+            <li><a href="prodi-fisika.html">Kembali ke Prodi Fisika</a></li>
+            <li><a href="#fasilitas">Fasilitas</a></li>
+            <li><a href="#riset">Riset</a></li>
+            <li><a href="#publikasi">Publikasi</a></li>
+          </ul>
+        </nav>
+        <div>
+          <h4>Newsletter</h4>
+          <form class="newsletter" onsubmit="return handleNewsletter(event)">
+            <input
+              type="email"
+              placeholder="Email Anda"
+              aria-label="Email untuk berlangganan"
+              required
+            />
+            <button class="btn btn-sm btn-ghost" type="submit">
+              Langganan
+            </button>
+          </form>
+        </div>
+      </div>
+    </footer>
+
+    <script src="assets/script.js"></script>
+  </body>
+</html>

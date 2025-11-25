@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Profil Dosen - Prof. Dr. rer-nat Wira Bahari Nurdin</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+
+    <link rel="stylesheet" href="assets/styles.css" />
+
+    <style>
+      /* --- CSS KHUSUS HALAMAN PROFIL --- */
+
+      /* 1. Header Profil (Biru) */
+      .profile-header {
+        background: linear-gradient(135deg, #0f3d91, #1a54c3);
+        color: #fff;
+
+        /* PERBAIKAN DI SINI: */
+        /* Atas 6rem (biar tidak kena navbar), Bawah 12rem (biar teks tidak ketutup kartu) */
+        padding: 6rem 0 12rem;
+
+        position: relative;
+      }
+
+      .breadcrumbs {
+        color: rgba(255, 255, 255, 0.7);
+        margin-bottom: 1rem;
+        font-size: 0.9rem;
+      }
+      .breadcrumbs a {
+        color: rgba(255, 255, 255, 0.8);
+        text-decoration: none;
+      }
+      .breadcrumbs a:hover {
+        color: #fff;
+        text-decoration: underline;
+      }
+      .breadcrumbs strong {
+        color: #fff;
+        font-weight: 700;
+      }
+
+      /* 2. Layout Grid Utama (Naik ke atas menimpa header biru) */
+      .profile-container {
+        max-width: 1100px;
+
+        /* Kartu ditarik ke atas 6rem agar masuk ke area biru */
+        margin: -6rem auto 5rem;
+
+        padding: 0 1.5rem;
+        display: grid;
+        grid-template-columns: 300px 1fr; /* Kiri 300px, Kanan Sisa */
+        gap: 2rem;
+        position: relative;
+        z-index: 10;
+      }
+
+      /* 3. Kartu Sidebar (Kiri) */
+      .profile-sidebar {
+        background: #fff;
+        border-radius: 16px;
+        padding: 2rem;
+        text-align: center;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        height: fit-content;
+      }
+
+      .profile-avatar {
+        width: 180px;
+        height: 180px;
+        border-radius: 50%;
+        border: 5px solid #fff;
+        margin: -100px auto 1.5rem; /* Foto naik keluar kartu */
+        overflow: hidden;
+        background: #e7efff;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+      }
+      .profile-avatar img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .profile-name {
+        font-size: 1.4rem;
+        color: #1f2937;
+        margin-bottom: 0.5rem;
+      }
+      .profile-role {
+        color: #0f3d91;
+        font-weight: 600;
+        margin-bottom: 1.5rem;
+      }
+
+      .contact-list {
+        text-align: left;
+        margin-top: 1.5rem;
+        border-top: 1px solid #eee;
+        padding-top: 1.5rem;
+      }
+      .contact-item {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin-bottom: 10px;
+        font-size: 0.9rem;
+        color: #555;
+      }
+      .contact-item i {
+        color: #0f3d91;
+        width: 20px;
+      }
+
+      /* 4. Konten Utama (Kanan) */
+      .profile-content {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+      }
+
+      .content-card {
+        background: #fff;
+        border-radius: 16px;
+        padding: 2rem;
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+        border: 1px solid #eef2ff;
+      }
+
+      .card-title {
+        font-size: 1.25rem;
+        color: #0f3d91;
+        margin-bottom: 1.5rem;
+        padding-bottom: 1rem;
+        border-bottom: 2px solid #f0f0f0;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+
+      /* Gaya Tag Keahlian */
+      .skill-tags {
+        display: flex;
+        gap: 0.5rem;
+        flex-wrap: wrap;
+      }
+      .skill-tag {
+        background: #eff6ff;
+        color: #1d4ed8;
+        padding: 5px 12px;
+        border-radius: 50px;
+        font-size: 0.85rem;
+        font-weight: 500;
+      }
+
+      /* Gaya Timeline Pendidikan */
+      .education-timeline {
+        list-style: none;
+        padding: 0;
+      }
+      .education-item {
+        position: relative;
+        padding-left: 2rem;
+        margin-bottom: 1.5rem;
+      }
+      .education-item::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 5px;
+        width: 12px;
+        height: 12px;
+        background: #0f3d91;
+        border-radius: 50%;
+      }
+      .education-item::after {
+        content: "";
+        position: absolute;
+        left: 5px;
+        top: 20px;
+        width: 2px;
+        height: 100%;
+        background: #e5e7eb;
+      }
+      .education-item:last-child::after {
+        display: none;
+      }
+
+      .edu-year {
+        font-weight: 700;
+        color: #1f2937;
+      }
+      .edu-degree {
+        color: #0f3d91;
+        font-weight: 600;
+      }
+      .edu-campus {
+        font-size: 0.9rem;
+        color: #666;
+      }
+
+      /* Gaya Tabel Publikasi */
+      .publication-list {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+      }
+      .pub-item {
+        padding: 1rem;
+        border: 1px solid #eee;
+        border-radius: 8px;
+        transition: 0.2s;
+      }
+      .pub-item:hover {
+        border-color: #0f3d91;
+        background: #f9faff;
+      }
+      .pub-title {
+        font-weight: 600;
+        color: #333;
+        margin-bottom: 0.3rem;
+        display: block;
+        text-decoration: none;
+      }
+      .pub-meta {
+        font-size: 0.85rem;
+        color: #666;
+      }
+
+      /* Tombol Back */
+      .btn-back {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        background: rgba(255, 255, 255, 0.2);
+        color: white;
+        padding: 8px 16px;
+        border-radius: 8px;
+        text-decoration: none;
+        margin-bottom: 1.5rem;
+        transition: 0.3s;
+        font-size: 0.9rem;
+      }
+      .btn-back:hover {
+        background: rgba(255, 255, 255, 0.4);
+      }
+
+      /* Responsif HP */
+      @media (max-width: 768px) {
+        .profile-header {
+          padding: 5rem 0 10rem; /* Sesuaikan padding di HP */
+        }
+        .profile-container {
+          grid-template-columns: 1fr;
+          margin-top: -5rem;
+        }
+        .profile-avatar {
+          width: 140px;
+          height: 140px;
+          margin-top: -80px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="profile-header">
+      <div
+        class="container"
+        style="max-width: 1100px; margin: 0 auto; padding: 0 1.5rem"
+      >
+        <a href="dosen.html" class="btn-back">
+          <i class="fas fa-arrow-left"></i> Kembali ke Daftar Dosen
+        </a>
+
+        <div class="breadcrumbs">
+          <a href="index.html">Beranda</a> / <a href="dosen.html">Dosen</a> /
+          <strong>Profil Dosen</strong>
+        </div>
+
+        <h1 style="margin: 0; font-size: 2.5rem; line-height: 1.2">
+          Profil Akademik
+        </h1>
+        <p style="opacity: 0.9; margin-top: 10px">
+          Program Studi Fisika FMIPA Universitas Hasanuddin
+        </p>
+      </div>
+    </header>
+
+    <div class="profile-container">
+      <aside class="profile-sidebar">
+        <div class="profile-avatar">
+          <img
+            src="assets/img/prof-dr-rer-nat-wira-bahari-nurdin.jpg"
+            alt="Foto Prof Wira"
+          />
+        </div>
+
+        <h2 class="profile-name">Prof. Dr. rer-nat Wira Bahari Nurdin</h2>
+        <div class="profile-role">Guru Besar / IV.d</div>
+
+        <div
+          class="skill-tags"
+          style="justify-content: center; margin-bottom: 1.5rem"
+        >
+          <span class="skill-tag">Physics</span>
+          <span class="skill-tag">Medical Physics</span>
+          <span class="skill-tag">Quantum Physics</span>
+          <span class="skill-tag">Aritficial Intelligence</span>
+        </div>
+
+        <div class="contact-list">
+          <div class="contact-item">
+            <span>Kontak</span>
+          </div>
+          <div class="contact-item">
+            <i class="fas fa-envelope"></i>
+            <span>wirabn@fmipa.unhas.ac.id</span>
+          </div>
+          <div class="contact-item">
+            <i class="fas fa-map-marker-alt"></i>
+            <span>Perdos Tamalanrea N2/AR Hakim A10</span>
+          </div>
+        </div>
+
+        <div style="margin-top: 2rem">
+          <a
+            href="https://scholar.google.com/citations?user=KLCFbp8AAAAJ&hl=en"
+            class="person-link"
+            target="_blank" 
+            rel="noopener noreferrer"
+            style="
+              width: 100%;
+              display: block;
+              text-align: center;
+              padding: 10px;
+              background: #0f3d91;
+              color: white;
+              border-radius: 8px;
+              text-decoration: none;
+            "
+          >
+            <i class="fas fa-graduation-cap"></i> Google Scholar
+          </a>
+        </div>
+      </aside>
+
+      <main class="profile-content">
+        <section class="content-card">
+          <h3 class="card-title">
+            <i class="fas fa-user"></i> Biografi Singkat
+          </h3>
+          <p style="line-height: 1.6; color: #444">
+            Prof. Wira Bahari Nurdin adalah seorang fisikawan teori yang
+            mendedikasikan karirnya untuk pengembangan metode komputasi dalam
+            sistem fisis kompleks. Beliau menyelesaikan pendidikan doktoral di
+            bidang Fisika Teori (rer.nat) di Jerman.
+          </p>
+          <p style="line-height: 1.6; color: #444; margin-top: 10px">
+            Saat ini menjabat sebagai Kepala Laboratorium Fisika Teori &
+            Komputasi. Fokus penelitian beliau mencakup simulasi material,
+            fisika statistik, dan pemodelan fenomena transport.
+          </p>
+        </section>
+
+        <section class="content-card">
+          <h3 class="card-title">
+            <i class="fas fa-university"></i> Riwayat Pendidikan
+          </h3>
+          <ul class="education-timeline">
+            <li class="education-item">
+              <div class="edu-year">2000</div>
+              <div class="edu-degree">Dr. rer. nat.</div>
+              <div class="edu-campus">
+                Theoretical Condensed Matter Physics, Freie University Berlin,
+                Jerman
+              </div>
+            </li>
+            <li class="education-item">
+              <div class="edu-year">1994</div>
+              <div class="edu-degree">Sarjana</div>
+              <div class="edu-campus">Universitas Hasanuddin, 1990</div>
+            </li>
+          </ul>
+        </section>
+
+        <section class="content-card">
+          <h3 class="card-title">
+            <i class="fas fa-book-open"></i> Publikasi Terindeks
+          </h3>
+          <div class="publication-list">
+            <div class="pub-item">
+              <span class="pub-title">2022</span>
+              <a href="https://doi.org/10.1088/1755-1315/967/1/012029" 
+              class="pub-meta"
+              target="_blank" 
+              rel="noopener noreferrer"
+                >Wiranata, I. G. A.; Nurdin, W. B.; Sudirman, S.; Abdullah, A. “Antioxidant, anti-inflammatory and anticoagulant activities of sulfate polysaccharide isolate from brown alga Sargassum policystum.” IOP Conference Series: Earth and Environmental Science, 967(1).</a
+              >
+            </div>
+
+            <div class="pub-item">
+              <span class="pub-title">2021</span>
+              <a href="https://repository.unhas.ac.id/id/eprint/8460/index.html" 
+              class="pub-meta"
+              target="_blank" 
+              rel="noopener noreferrer"
+                >Nurdin, W. B.; Nur, A.; Rauf, S. “One Month Consumption of Bitter Honey Improves Central Obesity Related Parameters.” Repository Universitas Hasanuddin.</a
+              >
+            </div>
+
+            <div class="pub-item">
+              <span class="pub-title">2019</span>
+              <a href="https://iopscience.iop.org/article/10.1088/1742-6596/1341/7/072006" 
+              class="pub-meta"
+              target="_blank" 
+              rel="noopener noreferrer"
+                >Nurdin, W. B.; Jaya, A.; Rachman, F.; Abdullah, A. “Anti-coagulant activities of Brown Seaweed Sargassum cristaefolium extract.” Journal of Physics: Conference Series, 1341(7).</a
+              >
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <footer
+      class="site-footer"
+      style="
+        background: #f8f9fa;
+        padding: 2rem 0;
+        text-align: center;
+        border-top: 1px solid #eee;
+        margin-top: 3rem;
+      "
+    >
+      <div class="container">
+        <p style="color: #666">
+          &copy; 2025 Program Studi Fisika FMIPA Universitas Hasanuddin.
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>
